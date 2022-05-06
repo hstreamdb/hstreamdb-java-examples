@@ -15,7 +15,7 @@ public class WriteDataBufferedExample {
       serviceUrl = System.getenv("serviceUrl");
     }
 
-    String streamName = "stream_h_records";
+    String streamName = "your_h_records_stream_name";
     HStreamClient client = HStreamClient.builder().serviceUrl(serviceUrl).build();
     writeHRecordDataWithBufferedProducers(client, streamName);
     client.close();

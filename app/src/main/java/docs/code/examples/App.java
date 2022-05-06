@@ -13,12 +13,16 @@ public class App {
     System.out.println("WriteDataBufferedExample Done");
     WriteDataWithKeyExample.main(null);
     System.out.println("WriteDataWithKeyExample Done");
+    CreateSubscriptionExample.main(null);
+    System.out.println("CreateSubscriptionExample Done");
     ConsumeDataSimpleExample.main(null);
     System.out.println("ConsumeDataSimpleExample Done");
     ConsumeDataSharedExample.main(null);
     System.out.println("ConsumeDataSharedExample Done");
     ConsumeDataWithErrorListenerExample.main(null);
     System.out.println("ConsumeDataWithErrorListenerExample Done");
+    DeleteSubscriptionExample.main(null);
+    System.out.println("DeleteSubscriptionExample Done");
     DeleteStreamExample.main(null);
     System.out.println("DeleteStreamExample Done");
   }

@@ -10,8 +10,8 @@ public class CreateStreamExample {
       serviceUrl = System.getenv("serviceUrl");
     }
 
-    String streamName1 = "stream_h_records";
-    String streamName2 = "stream_raw_records";
+    String streamName1 = "your_h_records_stream_name";
+    String streamName2 = "your_raw_records_stream_name";
 
     HStreamClient client = HStreamClient.builder().serviceUrl(serviceUrl).build();
     createStreamExample(client, streamName1);

@@ -5,7 +5,6 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 import io.hstream.Consumer;
 import io.hstream.HRecordReceiver;
 import io.hstream.HStreamClient;
-import io.hstream.Subscription;
 import java.util.concurrent.TimeoutException;
 
 public class ConsumeDataSimpleExample {
@@ -15,22 +14,10 @@ public class ConsumeDataSimpleExample {
       serviceUrl = System.getenv("serviceUrl");
     }
 
-    String streamName = "stream_h_records";
-    String subscriptionId = "your-subscription-id";
+    String subscriptionId = "your_subscription_id";
     HStreamClient client = HStreamClient.builder().serviceUrl(serviceUrl).build();
-    makeSubscriptionExample(client, streamName, subscriptionId);
     consumeDataFromSubscriptionExample(client, subscriptionId);
-    client.deleteSubscription(subscriptionId);
     client.close();
-  }
-
-  public static void makeSubscriptionExample(
-      HStreamClient client, String streamName, String subId) {
-    Subscription sub1 =
-        Subscription.newBuilder().subscription(subId).stream(streamName)
-            .ackTimeoutSeconds(600)
-            .build();
-    client.createSubscription(sub1);
   }
 
   public static void consumeDataFromSubscriptionExample(

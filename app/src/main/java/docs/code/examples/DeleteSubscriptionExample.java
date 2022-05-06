@@ -2,7 +2,7 @@ package docs.code.examples;
 
 import io.hstream.HStreamClient;
 
-public class DeleteStreamExample {
+public class DeleteSubscriptionExample {
   public static void main(String[] args) throws Exception {
     // TODO(developer): Replace these variables before running the sample.
     // String serviceUrl = "your-service-url-address";
@@ -11,20 +11,17 @@ public class DeleteStreamExample {
       serviceUrl = System.getenv("serviceUrl");
     }
 
-    String streamName1 = "your_h_records_stream_name";
-    String streamName2 = "your_raw_records_stream_name";
-
+    String subscriptionId = "your_subscription_id";
     HStreamClient client = HStreamClient.builder().serviceUrl(serviceUrl).build();
-    deleteStreamExample(client, streamName1);
-    deleteStreamForceExample(client, streamName2);
+    deleteSubscriptionExample(client, subscriptionId);
     client.close();
   }
 
-  public static void deleteStreamExample(HStreamClient client, String streamName) {
-    client.deleteStream(streamName);
+  public static void deleteSubscriptionExample(HStreamClient client, String subscriptionId) {
+    client.deleteSubscription(subscriptionId);
   }
 
-  public static void deleteStreamForceExample(HStreamClient client, String streamName) {
-    client.deleteStream(streamName, true);
+  public static void deleteSubscriptionForceExample(HStreamClient client, String subscriptionId) {
+    client.deleteSubscription(subscriptionId, true);
   }
 }
