@@ -14,6 +14,7 @@ public class App {
     WriteDataWithKeyExample.main(null);
     System.out.println("WriteDataWithKeyExample Done");
     CreateSubscriptionExample.main(null);
+    ListSubscriptionsExample.main(null);
     System.out.println("CreateSubscriptionExample Done");
     ConsumeDataSimpleExample.main(null);
     System.out.println("ConsumeDataSimpleExample Done");
