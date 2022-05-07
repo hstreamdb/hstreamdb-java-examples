@@ -8,9 +8,15 @@
 ## Examples
 
 ### Stream
-- [CreateStreamExample.java](app/src/main/java/docs/code/examples/CreateStreamExample.java) - How to create streams
+- [CreateStreamExample.java](app/src/main/java/docs/code/examples/CreateStreamExample.java) - How to create a stream
 - [ListStreamsExample.java](app/src/main/java/docs/code/examples/ListStreamsExample.java) - How to lists streams
-- [DeleteStreamExample.java](app/src/main/java/docs/code/examples/DeleteStreamExample.java) - How to delete streams
+- [DeleteStreamExample.java](app/src/main/java/docs/code/examples/DeleteStreamExample.java) - How to delete a stream
+
+### Subscription 
+- [CreateSubscriptionExample.java](app/src/main/java/docs/code/examples/CreateSubscriptionExample.java) - How to create a subscription
+- [ListSubscriptionsExample.java](app/src/main/java/docs/code/examples/ListSubscriptionsExample.java) - How to lists subscriptions
+- [DeleteSubscriptionExample.java](app/src/main/java/docs/code/examples/DeleteSubscriptionExample.java) - How to delete create a subscription
+
 
 ### Producer
 - [WriteDataSimpleExample.java](app/src/main/java/docs/code/examples/WriteDataSimpleExample.java) - How to write RawRecord and HRecord messages
