@@ -40,16 +40,16 @@ public class WriteDataWithKeyExample {
       Record record;
       if ((i % 3) == 0) {
         HRecord hRecord = HRecord.newBuilder().put("temperature", temp).put("withKey", 1).build();
-        record = Record.newBuilder().hRecord(hRecord).orderingKey(key1).build();
+        record = Record.newBuilder().hRecord(hRecord).partitionKey(key1).build();
       } else {
         HRecord hRecord = HRecord.newBuilder().put("temperature", temp).put("withKey", 2).build();
-        record = Record.newBuilder().hRecord(hRecord).orderingKey(key2).build();
+        record = Record.newBuilder().hRecord(hRecord).partitionKey(key2).build();
       }
 
       CompletableFuture<String> recordId = producer.write(record);
       recordIds.add(recordId);
     }
-    producer.close();
     System.out.println("Wrote message IDs: " + recordIds.stream().map(CompletableFuture::join));
+    producer.close();
   }
 }

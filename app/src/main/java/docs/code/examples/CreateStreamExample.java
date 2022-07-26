@@ -15,11 +15,22 @@ public class CreateStreamExample {
 
     HStreamClient client = HStreamClient.builder().serviceUrl(serviceUrl).build();
     createStreamExample(client, streamName1);
-    createStreamExample(client, streamName2);
+    createStreamWithAttrsExample(client, streamName2);
     client.close();
   }
 
   public static void createStreamExample(HStreamClient client, String streamName) {
     client.createStream(streamName);
+  }
+
+  public static void createStreamWithAttrsExample(HStreamClient client, String streamName) {
+    client.createStream(
+        streamName,
+        (short) 1 // replication factor
+        ,
+        10 // Number of shards
+        ,
+        7 * 24 * 3600 // backlog retention time in seconds
+        );
   }
 }

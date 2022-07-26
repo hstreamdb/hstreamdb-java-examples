@@ -33,14 +33,14 @@ public class WriteDataSimpleExample {
 
     HRecord hRecord =
         HRecord.newBuilder()
-            // number
+            // Number
             .put("id", 10)
             // Boolean
             .put("isReady", true)
             // List
             .put("targets", HArray.newBuilder().add(1).add(2).add(3).build())
             // String
-            .put("name", "h".repeat(100))
+            .put("name", "hRecord-example")
             .build();
 
     for (int i = 0; i <= 3000; i++) {

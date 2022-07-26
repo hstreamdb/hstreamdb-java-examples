@@ -30,10 +30,9 @@ services:
         --store-admin-host hstore --store-admin-port 6440
 
   hstream-http-server:
-    image: hstreamdb/hstream:v0.8.0
+    image: hstreamdb/hstream:v0.9.0
     depends_on:
       - hserver0
-      - hserver1
     ports:
       - "127.0.0.1:6580:6580"
     expose:
