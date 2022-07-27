@@ -7,6 +7,7 @@ public class App {
     CreateStreamExample.main(null);
     System.out.println("CreateStreamExample Done");
     ListStreamsExample.main(null);
+    ListShardsExample.main(null);
     WriteDataSimpleExample.main(null);
     System.out.println("WriteDataSimpleExample Done");
     WriteDataBufferedExample.main(null);
